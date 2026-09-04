@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PaySentinel AI | Risk Intelligence</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- =================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ◈
+            </div>
+
+            <div>
+                <h2>PaySentinel</h2>
+                <span>AI RISK MANAGER</span>
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <p class="nav-title">
+                MAIN
+            </p>
+
+
+            <!-- DASHBOARD -->
+
+            <button class="nav-item active" id="dashboardNav">
+
+                <span class="nav-icon">▦</span>
+
+                Dashboard
+
+            </button>
+
+
+            <!-- ANALYZE TRANSACTION -->
+
+            <button class="nav-item" id="analyzeNav">
+
+                <span class="nav-icon">⌁</span>
+
+                Analyze Transaction
+
+            </button>
+
+
+            <!-- TRANSACTIONS -->
+
+            <button class="nav-item" id="transactionsNav">
+
+                <span class="nav-icon">◫</span>
+
+                Transactions
+
+            </button>
+
+
+            <p class="nav-title second">
+                MONITORING
+            </p>
+
+
+            <!-- RISK ANALYTICS -->
+
+            <button class="nav-item" id="analyticsNav">
+
+                <span class="nav-icon">◉</span>
+
+                Risk Analytics
+
+            </button>
+
+
+            <!-- ALERTS -->
+
+            <button class="nav-item" id="alertsNav">
+
+                <span class="nav-icon">⚠</span>
+
+                Alerts
+
+            </button>
+
+
+            <!-- SETTINGS -->
+
+            <button class="nav-item" id="settingsNav">
+
+                <span class="nav-icon">⚙</span>
+
+                Settings
+
+            </button>
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+
+                    <strong>System Online</strong>
+
+                    <small>AI engine operational</small>
+
+                </div>
+
+            </div>
+
+            <div class="version">
+                API v2.0
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =================================================
+         MAIN CONTENT
+    ================================================== -->
+
+    <main class="main-content" id="dashboard">
+
+
+        <!-- =================================================
+             TOP BAR
+        ================================================== -->
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="breadcrumb">
+                    Risk Intelligence / Dashboard
+                </p>
+
+                <h1>
+                    Payment Risk Intelligence
+                </h1>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <div class="api-status">
+
+                    <span class="status-dot"></span>
+
+                    API ONLINE
+
+                </div>
+
+
+                <div class="profile">
+
+                    <div class="profile-avatar">
+                        DS
+                    </div>
+
+                    <div>
+
+                        <strong>Risk Analyst</strong>
+
+                        <small>Administrator</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             STATISTICS
+        ================================================== -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-header">
+
+                    <span>
+                        TRANSACTIONS ANALYZED
+                    </span>
+
+                    <div class="stat-icon blue">
+                        ↗
+                    </div>
+
+                </div>
+
+                <h2>
+                    20,000
+                </h2>
+
+                <p class="positive">
+                    ↑ Dataset transactions
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-header">
+
+                    <span>
+                        CHARGEBACKS
+                    </span>
+
+                    <div class="stat-icon red">
+                        ⚠
+                    </div>
+
+                </div>
+
+                <h2>
+                    779
+                </h2>
+
+                <p class="negative">
+                    Detected in dataset
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-header">
+
+                    <span>
+                        MODEL ROC-AUC
+                    </span>
+
+                    <div class="stat-icon purple">
+                        ✦
+                    </div>
+
+                </div>
+
+                <h2>
+                    0.83
+                </h2>
+
+                <p class="positive">
+                    ↑ Risk classification
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-header">
+
+                    <span>
+                        DECISION THRESHOLD
+                    </span>
+
+                    <div class="stat-icon orange">
+                        ◉
+                    </div>
+
+                </div>
+
+                <h2>
+                    0.30
+                </h2>
+
+                <p>
+                    Cost optimized
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ANALYSIS AREA
+        ================================================== -->
+
+        <section class="analysis-grid">
+
+
+            <!-- TRANSACTION FORM -->
+
+            <div class="panel transaction-panel" id="analyze-section">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            TRANSACTION ANALYSIS
+                        </span>
+
+                        <h2>
+                            Analyze Payment
+                        </h2>
+
+                    </div>
+
+                    <div class="secure-badge">
+                        🔒 SECURE
+                    </div>
+
+                </div>
+
+
+                <p class="panel-description">
+
+                    Enter transaction details to evaluate
+                    payment risk using the AI risk engine.
+
+                </p>
+
+
+                <form id="riskForm">
+
+
+                    <!-- AMOUNT -->
+
+                    <div class="form-group">
+
+                        <label for="amount">
+                            Transaction Amount
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-prefix">
+                                ₹
+                            </span>
+
+                            <input
+                                type="number"
+                                id="amount"
+                                name="amount"
+                                placeholder="50000"
+                                value="50000"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ACCOUNT AGE + PREVIOUS ORDERS -->
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="account_age_days">
+                                Account Age
+                                <span>(days)</span>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="account_age_days"
+                                name="account_age_days"
+                                placeholder="2"
+                                value="2"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="previous_orders">
+                                Previous Orders
+                            </label>
+
+                            <input
+                                type="number"
+                                id="previous_orders"
+                                name="previous_orders"
+                                placeholder="0"
+                                value="0"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAILED PAYMENTS + TRANSACTIONS -->
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="failed_payments">
+                                Failed Payments
+                            </label>
+
+                            <input
+                                type="number"
+                                id="failed_payments"
+                                name="failed_payments"
+                                placeholder="4"
+                                value="4"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="transactions_last_hour">
+                                Transactions / Hour
+                            </label>
+
+                            <input
+                                type="number"
+                                id="transactions_last_hour"
+                                name="transactions_last_hour"
+                                placeholder="10"
+                                value="10"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- NEW DEVICE + LOCATION -->
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="new_device">
+                                New Device
+                            </label>
+
+                            <select
+                                id="new_device"
+                                name="new_device"
+                            >
+
+                                <option value="0">
+                                    No
+                                </option>
+
+                                <option value="1" selected>
+                                    Yes
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="location_changed">
+                                Location Changed
+                            </label>
+
+                            <select
+                                id="location_changed"
+                                name="location_changed"
+                            >
+
+                                <option value="0">
+                                    No
+                                </option>
+
+                                <option value="1" selected>
+                                    Yes
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DELIVERY COMPLETED -->
+
+                    <div class="form-group">
+
+                        <label for="delivery_completed">
+                            Delivery Completed
+                        </label>
+
+                        <select
+                            id="delivery_completed"
+                            name="delivery_completed"
+                        >
+
+                            <option value="0" selected>
+                                No
+                            </option>
+
+                            <option value="1">
+                                Yes
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- ANALYZE BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="analyze-button"
+                        id="analyzeButton"
+                    >
+
+                        <span>✦</span>
+
+                        ANALYZE TRANSACTION
+
+                        <span>→</span>
+
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RISK RESULT
+            ================================================== -->
+
+            <div class="panel risk-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            AI ASSESSMENT
+                        </span>
+
+                        <h2>
+                            Risk Decision
+                        </h2>
+
+                    </div>
+
+                    <div
+                        id="decisionBadge"
+                        class="decision-badge high"
+                    >
+                        FLAG
+                    </div>
+
+                </div>
+
+
+                <div class="risk-gauge-container">
+
+                    <div class="risk-gauge">
+
+                        <div class="gauge-inner">
+
+                            <span
+                                class="risk-number"
+                                id="riskScore"
+                            >
+                                96
+                            </span>
+
+                            <span class="risk-out-of">
+                                / 100
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="risk-level high"
+                        id="riskLevel"
+                    >
+                        HIGH RISK
+                    </div>
+
+                </div>
+
+
+                <div class="probability-section">
+
+                    <div class="probability-header">
+
+                        <span>
+                            Chargeback Probability
+                        </span>
+
+                        <strong id="probability">
+                            96.36%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-track">
+
+                        <div
+                            class="progress-fill"
+                            id="probabilityBar"
+                            style="width: 96.36%"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="decision-box">
+
+                    <div class="decision-icon">
+                        ⚠
+                    </div>
+
+                    <div>
+
+                        <span>
+                            RECOMMENDED ACTION
+                        </span>
+
+                        <strong id="decisionText">
+                            FLAG TRANSACTION
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EXPLANATION SECTION
+        ================================================== -->
+
+        <section class="panel explanation-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="panel-label">
+                        EXPLAINABLE AI
+                    </span>
+
+                    <h2>
+                        Why was this transaction flagged?
+                    </h2>
+
+                </div>
+
+                <span class="shap-badge">
+                    SHAP ANALYSIS
+                </span>
+
+            </div>
+
+
+            <p class="panel-description">
+
+                The following factors contributed most to the
+                AI's risk assessment.
+
+            </p>
+
+
+            <!-- RISK FACTORS -->
+
+            <div class="factor-section">
+
+                <div class="factor-title risk-title">
+
+                    <span class="factor-dot red-dot"></span>
+
+                    INCREASED RISK
+
+                </div>
+
+
+                <div id="riskFactors">
+
+                    <div class="factor-row">
+
+                        <div class="factor-info">
+
+                            <strong>
+                                Failed Payments
+                            </strong>
+
+                            <small>
+                                Multiple failed payments detected
+                            </small>
+
+                        </div>
+
+                        <div class="factor-bar-container">
+
+                            <div
+                                class="factor-bar risk-bar"
+                                style="width: 90%"
+                            ></div>
+
+                        </div>
+
+                        <strong class="contribution risk-contribution">
+                            +1.0977
+                        </strong>
+
+                    </div>
+
+
+                    <div class="factor-row">
+
+                        <div class="factor-info">
+
+                            <strong>
+                                Location Changed
+                            </strong>
+
+                            <small>
+                                Customer location changed
+                            </small>
+
+                        </div>
+
+                        <div class="factor-bar-container">
+
+                            <div
+                                class="factor-bar risk-bar"
+                                style="width: 65%"
+                            ></div>
+
+                        </div>
+
+                        <strong class="contribution risk-contribution">
+                            +0.7790
+                        </strong>
+
+                    </div>
+
+
+                    <div class="factor-row">
+
+                        <div class="factor-info">
+
+                            <strong>
+                                New Device
+                            </strong>
+
+                            <small>
+                                New device detected
+                            </small>
+
+                        </div>
+
+                        <div class="factor-bar-container">
+
+                            <div
+                                class="factor-bar risk-bar"
+                                style="width: 58%"
+                            ></div>
+
+                        </div>
+
+                        <strong class="contribution risk-contribution">
+                            +0.6871
+                        </strong>
+
+                    </div>
+
+
+                    <div class="factor-row">
+
+                        <div class="factor-info">
+
+                            <strong>
+                                Account Age
+                            </strong>
+
+                            <small>
+                                Account age contributed to risk
+                            </small>
+
+                        </div>
+
+                        <div class="factor-bar-container">
+
+                            <div
+                                class="factor-bar risk-bar"
+                                style="width: 54%"
+                            ></div>
+
+                        </div>
+
+                        <strong class="contribution risk-contribution">
+                            +0.6424
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROTECTIVE FACTORS -->
+
+            <div class="factor-section protective-section">
+
+                <div class="factor-title protective-title">
+
+                    <span class="factor-dot green-dot"></span>
+
+                    PROTECTIVE SIGNALS
+
+                </div>
+
+
+                <div id="protectiveFactors">
+
+                    <div class="factor-row">
+
+                        <div class="factor-info">
+
+                            <strong>
+                                Transaction Amount
+                            </strong>
+
+                            <small>
+                                Amount affected the risk score
+                            </small>
+
+                        </div>
+
+                        <div class="factor-bar-container">
+
+                            <div
+                                class="factor-bar protective-bar"
+                                style="width: 45%"
+                            ></div>
+
+                        </div>
+
+                        <strong class="contribution protective-contribution">
+                            -0.4268
+                        </strong>
+
+                    </div>
+
+
+                    <div class="factor-row">
+
+                        <div class="factor-info">
+
+                            <strong>
+                                Previous Orders
+                            </strong>
+
+                            <small>
+                                Previous order history affected risk
+                            </small>
+
+                        </div>
+
+                        <div class="factor-bar-container">
+
+                            <div
+                                class="factor-bar protective-bar"
+                                style="width: 25%"
+                            ></div>
+
+                        </div>
+
+                        <strong class="contribution protective-contribution">
+                            -0.1593
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RECENT TRANSACTIONS
+        ================================================== -->
+
+        <section
+            class="panel transactions-panel"
+            id="transactions-section"
+        >
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="panel-label">
+                        MONITORING
+                    </span>
+
+                    <h2>
+                        Recent Transactions
+                    </h2>
+
+                </div>
+
+                <span class="shap-badge">
+                    LIVE
+                </span>
+
+            </div>
+
+
+            <div class="transactions-table-wrapper">
+
+                <table class="transactions-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>TRANSACTION</th>
+                            <th>AMOUNT</th>
+                            <th>RISK SCORE</th>
+                            <th>PROBABILITY</th>
+                            <th>RISK LEVEL</th>
+                            <th>DECISION</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="transactionHistory">
+
+                        <tr>
+
+                            <td
+                                colspan="6"
+                                class="empty-history"
+                            >
+                                No transactions analyzed yet.
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RISK ANALYTICS
+        ================================================== -->
+
+        <section
+            class="panel analytics-panel"
+            id="analytics-section"
+        >
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="panel-label">
+                        MONITORING
+                    </span>
+
+                    <h2>
+                        Risk Analytics
+                    </h2>
+
+                </div>
+
+                <span class="shap-badge">
+                    AI INSIGHTS
+                </span>
+
+            </div>
+
+
+            <p class="panel-description">
+
+                Overview of transaction risk patterns detected by
+                the PaySentinel AI risk engine.
+
+            </p>
+
+
+            <div class="analytics-grid">
+
+                <div class="analytics-card">
+
+                    <span>
+                        HIGH RISK
+                    </span>
+
+                    <strong id="highRiskCount">
+                        0
+                    </strong>
+
+                    <small>
+                        Transactions flagged
+                    </small>
+
+                </div>
+
+
+                <div class="analytics-card">
+
+                    <span>
+                        MEDIUM RISK
+                    </span>
+
+                    <strong id="mediumRiskCount">
+                        0
+                    </strong>
+
+                    <small>
+                        Transactions requiring review
+                    </small>
+
+                </div>
+
+
+                <div class="analytics-card">
+
+                    <span>
+                        LOW RISK
+                    </span>
+
+                    <strong id="lowRiskCount">
+                        0
+                    </strong>
+
+                    <small>
+                        Transactions approved
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ALERTS
+        ================================================== -->
+
+        <section
+            class="panel dashboard-section"
+            id="alertsSection"
+        >
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="panel-label">
+                        SECURITY MONITORING
+                    </span>
+
+                    <h2>
+                        Alerts
+                    </h2>
+
+                </div>
+
+                <span class="shap-badge">
+                    LIVE
+                </span>
+
+            </div>
+
+
+            <p class="panel-description">
+
+                Important risk alerts generated by the
+                PaySentinel AI engine.
+
+            </p>
+
+
+            <div class="alerts-grid">
+
+
+                <!-- HIGH RISK ALERT -->
+
+                <div class="alert-card high-alert">
+
+                    <div class="alert-icon">
+                        ⚠
+                    </div>
+
+                    <div class="alert-content">
+
+                        <span class="alert-type">
+                            HIGH RISK
+                        </span>
+
+                        <h3>
+                            High-risk transaction detected
+                        </h3>
+
+                        <p>
+                            A transaction exceeded the configured
+                            risk threshold and requires immediate review.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- NEW DEVICE ALERT -->
+
+                <div class="alert-card device-alert">
+
+                    <div class="alert-icon">
+                        📱
+                    </div>
+
+                    <div class="alert-content">
+
+                        <span class="alert-type">
+                            NEW DEVICE
+                        </span>
+
+                        <h3>
+                            New device detected
+                        </h3>
+
+                        <p>
+                            A transaction was initiated from a device
+                            not previously associated with the account.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LOCATION ALERT -->
+
+                <div class="alert-card location-alert">
+
+                    <div class="alert-icon">
+                        📍
+                    </div>
+
+                    <div class="alert-content">
+
+                        <span class="alert-type">
+                            LOCATION CHANGE
+                        </span>
+
+                        <h3>
+                            Unusual location detected
+                        </h3>
+
+                        <p>
+                            The transaction location differs from the
+                            customer's previous activity.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PAYMENT FAILURE ALERT -->
+
+                <div class="alert-card payment-alert">
+
+                    <div class="alert-icon">
+                        💳
+                    </div>
+
+                    <div class="alert-content">
+
+                        <span class="alert-type">
+                            PAYMENT FAILURE
+                        </span>
+
+                        <h3>
+                            Multiple failed payments
+                        </h3>
+
+                        <p>
+                            Several payment attempts failed and increased
+                            the transaction's risk score.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SETTINGS
+        ================================================== -->
+
+        <section
+            class="panel dashboard-section"
+            id="settingsSection"
+        >
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="panel-label">
+                        SYSTEM
+                    </span>
+
+                    <h2>
+                        Settings
+                    </h2>
+
+                </div>
+
+                <span class="shap-badge">
+                    CONFIGURATION
+                </span>
+
+            </div>
+
+
+            <p class="panel-description">
+
+                Configure PaySentinel AI risk monitoring
+                and system preferences.
+
+            </p>
+
+
+            <div class="settings-grid">
+
+
+                <!-- AI RISK ENGINE -->
+
+                <div class="setting-card">
+
+                    <div>
+
+                        <strong>
+                            AI Risk Engine
+                        </strong>
+
+                        <small>
+                            Enable AI-powered transaction risk analysis
+                        </small>
+
+                    </div>
+
+                    <label class="toggle">
+
+                        <input
+                            type="checkbox"
+                            checked
+                        >
+
+                        <span class="toggle-slider"></span>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- HIGH RISK ALERTS -->
+
+                <div class="setting-card">
+
+                    <div>
+
+                        <strong>
+                            High Risk Alerts
+                        </strong>
+
+                        <small>
+                            Receive alerts when high-risk transactions
+                            are detected
+                        </small>
+
+                    </div>
+
+                    <label class="toggle">
+
+                        <input
+                            type="checkbox"
+                            checked
+                        >
+
+                        <span class="toggle-slider"></span>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- NEW DEVICE DETECTION -->
+
+                <div class="setting-card">
+
+                    <div>
+
+                        <strong>
+                            New Device Detection
+                        </strong>
+
+                        <small>
+                            Monitor transactions from newly detected devices
+                        </small>
+
+                    </div>
+
+                    <label class="toggle">
+
+                        <input
+                            type="checkbox"
+                            checked
+                        >
+
+                        <span class="toggle-slider"></span>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- LOCATION MONITORING -->
+
+                <div class="setting-card">
+
+                    <div>
+
+                        <strong>
+                            Location Monitoring
+                        </strong>
+
+                        <small>
+                            Monitor unusual changes in transaction location
+                        </small>
+
+                    </div>
+
+                    <label class="toggle">
+
+                        <input
+                            type="checkbox"
+                            checked
+                        >
+
+                        <span class="toggle-slider"></span>
+
+                    </label>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+            <span>
+                PaySentinel AI
+            </span>
+
+            <span>
+                AI-powered payment risk intelligence
+            </span>
+
+            <span>
+                API v2.0
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
